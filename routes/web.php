@@ -5,6 +5,11 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\CategoryController;
 
+Route::get('/', function(){
+return redirect('/products');
+
+});
+
 Route::get('/products', [ProductController::class, 'index']);
 
 Route::post('/products_form', [ProductController::class, 'store']);
